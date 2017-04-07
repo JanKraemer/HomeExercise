@@ -42,5 +42,6 @@ public class LectureViewHolder extends RecyclerView.ViewHolder {
             }
         };
         cardView.setOnClickListener(onClickListener);
+        imageView.setOnClickListener(onClickListener);
     }
 }

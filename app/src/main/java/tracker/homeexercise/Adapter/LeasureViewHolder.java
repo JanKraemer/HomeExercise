@@ -38,6 +38,7 @@ public class LeasureViewHolder extends RecyclerView.ViewHolder {
             }
         };
         cardView.setOnClickListener(onClickListener);
+        imageView.setOnClickListener(onClickListener);
     }
 }
 

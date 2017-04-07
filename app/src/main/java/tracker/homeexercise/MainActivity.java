@@ -1,6 +1,7 @@
 package tracker.homeexercise;
 
 import android.app.ActivityManager;
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new Adapter(data, new Adapter.OnItemClickListener() {
             @Override
             public void onClick(int position) {
-                Log.d("TAG", "onItemClick" + position);
+                Log.d("TAG","onItemClick"+position);
             }
         }, new Adapter.OnBottomListener() {
             @Override

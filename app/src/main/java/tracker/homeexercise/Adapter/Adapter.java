@@ -55,20 +55,23 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if(position>=getItemCount()-1)
             onBottomListener.onBottom(position);
-        if( data.get(position) instanceof LeasureActivity)
+        if( data.get(position).getType() == 1337)
         {
             LeasureViewHolder viewHolder = (LeasureViewHolder) holder;
             LeasureActivity activity = (LeasureActivity)data.get(position);
             viewHolder.activity_name.setText(activity.getName());
             viewHolder.time.setText(activity.getTime().toString());
-        }else if(data.get(position) instanceof Lecture)
+            viewHolder.setClickListener(position);
+        }else if(data.get(position).getType() == 42)
         {
             LectureViewHolder viewHolder = (LectureViewHolder) holder;
             Lecture activity = (Lecture) data.get(position);
             viewHolder.course_name.setText(activity.getCourseName());
             viewHolder.time.setText(activity.getTime().toString());
             viewHolder.room.setText(activity.getRoom());
+            viewHolder.setClickListener(position);
         }
+
     }
 
     @Override
