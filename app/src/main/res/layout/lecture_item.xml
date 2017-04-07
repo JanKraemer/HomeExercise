@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:lecture_cardView="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/lecture_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        lecture_cardView:cardCornerRadius="2dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/lecture_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_marginRight="2dp"
+                />
+
+            <TextView
+                android:id="@+id/course_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lecture_image"
+                android:text="TextView"
+                android:textSize="22dp"/>
+
+            <TextView
+                android:id="@+id/lecture_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/course_name"
+                android:layout_toRightOf="@+id/lecture_image"
+                android:text="TextView"
+                android:textSize ="22dp"/>
+
+            <TextView
+                android:id="@+id/lecture_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lecture_image"
+                android:layout_below="@+id/lecture_room"
+                android:text="TextView"
+                android:textSize ="22dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
